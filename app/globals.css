@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-ink-800 font-sans;
+    font-feature-settings: "ss01", "cv11", "cv02";
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.003em;
+  }
+
+  h1, h2, h3, h4 {
+    @apply text-ink-900 tracking-tightest;
+  }
+
+  ::selection {
+    @apply bg-ink-900 text-white;
+  }
+
+  /* Refined input focus — soft ink-tinted glow instead of a hard ring. */
+  input:focus,
+  select:focus,
+  textarea:focus {
+    @apply border-ink-900 outline-none;
+    box-shadow: 0 0 0 4px rgba(11, 11, 12, 0.06);
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-container px-6 md:px-10;
+  }
+
+  .hairline {
+    @apply border-t border-ink-200;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-ink-900 px-6 py-3
+           text-sm font-medium text-white shadow-button-press
+           transition-all duration-200 hover:bg-ink-800 hover:shadow-card-hover
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink-900 focus-visible:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink-200
+           bg-white px-6 py-3 text-sm font-medium text-ink-900
+           transition-all duration-200 hover:border-ink-400 hover:bg-ink-50
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink-900 focus-visible:ring-offset-2;
+  }
+
+  .eyebrow {
+    @apply text-xs uppercase tracking-[0.2em] text-ink-500;
+  }
+}
+
+/* ---------- Subtle motion utilities (short, snappy, not flashy) ---------- */
+@layer utilities {
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 220ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+  .animate-fade-in {
+    animation: fade-in 180ms ease-out both;
+  }
+
+  /* Respect user preference for reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-up,
+    .animate-fade-in {
+      animation: none;
+    }
+  }
+}
