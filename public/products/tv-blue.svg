@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 340">
+<defs>
+<linearGradient id="body-tv" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#fff" stop-opacity="0.18"/>
+  <stop offset="0.35" stop-color="#fff" stop-opacity="0.04"/>
+  <stop offset="0.65" stop-color="#000" stop-opacity="0"/>
+  <stop offset="1" stop-color="#000" stop-opacity="0.22"/>
+</linearGradient>
+<linearGradient id="vert-tv" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#fff" stop-opacity="0.12"/>
+  <stop offset="0.5" stop-color="#fff" stop-opacity="0"/>
+  <stop offset="1" stop-color="#000" stop-opacity="0.12"/>
+</linearGradient>
+<radialGradient id="lens-tv" cx="0.32" cy="0.30" r="0.85">
+  <stop offset="0" stop-color="#3A3A40"/>
+  <stop offset="0.25" stop-color="#141416"/>
+  <stop offset="0.7" stop-color="#050506"/>
+  <stop offset="1" stop-color="#000"/>
+</radialGradient>
+<radialGradient id="screen-tv" cx="0.5" cy="0.4" r="0.75">
+  <stop offset="0" stop-color="#1A2540" stop-opacity="0.55"/>
+  <stop offset="0.5" stop-color="#0A1020" stop-opacity="0.35"/>
+  <stop offset="1" stop-color="#000" stop-opacity="0"/>
+</radialGradient>
+<filter id="softblur-tv" x="-30%" y="-30%" width="160%" height="160%">
+  <feGaussianBlur stdDeviation="6"/>
+</filter>
+</defs>
+<!-- Soft ground shadow -->
+<ellipse cx="260" cy="324" rx="125" ry="7" fill="#000" opacity="0.25" filter="url(#softblur-tv)"/>
+<!-- Two-legged stand -->
+<path d="M180 298 L210 298 L204 316 L176 316 Z" fill="#22416A" stroke="rgba(0,0,0,0.4)"/>
+<path d="M310 298 L340 298 L344 316 L316 316 Z" fill="#22416A" stroke="rgba(0,0,0,0.4)"/>
+<!-- Frame (ultra-thin modern bezel) -->
+<rect x="8" y="8" width="504" height="282" rx="4" fill="#22416A" stroke="rgba(0,0,0,0.4)"/>
+<rect x="8" y="8" width="504" height="282" rx="4" fill="url(#body-tv)"/>
+<!-- Top rim light -->
+<rect x="30" y="8.5" width="460" height="0.6" fill="rgba(255,255,255,0.14)"/>
+<!-- Screen glass -->
+<rect x="13" y="13" width="494" height="257" rx="1.5" fill="#0A0E18" stroke="rgba(0,0,0,0.5)"/>
+<!-- Screen content glow -->
+<rect x="13" y="13" width="494" height="257" rx="1.5" fill="url(#screen-tv)"/>
+<!-- Screen gloss reflection -->
+<path d="M13 13 L220 13 L140 140 L13 140 Z" fill="rgba(255,255,255,0.035)"/>
+<!-- Subtle bottom-bezel indicator -->
+<circle cx="260" cy="280" r="1.6" fill="rgba(0,0,0,0.5)"/>
+</svg>

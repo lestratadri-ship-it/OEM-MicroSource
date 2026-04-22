@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 200">
+<defs>
+<linearGradient id="body-wc" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#fff" stop-opacity="0.18"/>
+  <stop offset="0.35" stop-color="#fff" stop-opacity="0.04"/>
+  <stop offset="0.65" stop-color="#000" stop-opacity="0"/>
+  <stop offset="1" stop-color="#000" stop-opacity="0.22"/>
+</linearGradient>
+<linearGradient id="vert-wc" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#fff" stop-opacity="0.12"/>
+  <stop offset="0.5" stop-color="#fff" stop-opacity="0"/>
+  <stop offset="1" stop-color="#000" stop-opacity="0.12"/>
+</linearGradient>
+<radialGradient id="lens-wc" cx="0.32" cy="0.30" r="0.85">
+  <stop offset="0" stop-color="#3A3A40"/>
+  <stop offset="0.25" stop-color="#141416"/>
+  <stop offset="0.7" stop-color="#050506"/>
+  <stop offset="1" stop-color="#000"/>
+</radialGradient>
+<radialGradient id="screen-wc" cx="0.5" cy="0.4" r="0.75">
+  <stop offset="0" stop-color="#1A2540" stop-opacity="0.55"/>
+  <stop offset="0.5" stop-color="#0A1020" stop-opacity="0.35"/>
+  <stop offset="1" stop-color="#000" stop-opacity="0"/>
+</radialGradient>
+<filter id="softblur-wc" x="-30%" y="-30%" width="160%" height="160%">
+  <feGaussianBlur stdDeviation="6"/>
+</filter>
+</defs>
+<!-- Soft ground shadow -->
+<ellipse cx="130" cy="188" rx="75" ry="5" fill="#000" opacity="0.24" filter="url(#softblur-wc)"/>
+<!-- Mounting clip/stand -->
+<path d="M108 125 L152 125 L147 172 L113 172 Z" fill="#1A1A1D" stroke="rgba(0,0,0,0.5)"/>
+<path d="M108 125 L152 125 L147 172 L113 172 Z" fill="url(#body-wc)"/>
+<!-- Clip hinge -->
+<rect x="116" y="165" width="28" height="4" rx="2" fill="#050507" opacity="0.7"/>
+<!-- Main body -->
+<rect x="38" y="40" width="184" height="92" rx="16" fill="#1A1A1D" stroke="rgba(0,0,0,0.5)"/>
+<rect x="38" y="40" width="184" height="92" rx="16" fill="url(#body-wc)"/>
+<!-- Rim light on top edge -->
+<rect x="60" y="40.5" width="140" height="0.6" fill="rgba(255,255,255,0.16)"/>
+<!-- Lens housing (recessed ring) -->
+<circle cx="130" cy="86" r="32" fill="#050507" opacity="0.6"/>
+<circle cx="130" cy="86" r="30" fill="rgba(0,0,0,0.35)"/>
+<!-- Outer lens ring -->
+<circle cx="130" cy="86" r="26" fill="url(#lens-wc)"/>
+<!-- Inner lens -->
+<circle cx="130" cy="86" r="19" fill="#0A0A0D"/>
+<circle cx="130" cy="86" r="13" fill="#000"/>
+<!-- Glass reflection (main, top-left) -->
+<ellipse cx="122" cy="78" rx="7" ry="4.5" fill="rgba(255,255,255,0.28)"/>
+<!-- Glass reflection (secondary) -->
+<ellipse cx="138" cy="94" rx="3" ry="2" fill="rgba(255,255,255,0.12)"/>
+<!-- LED indicator -->
+<circle cx="195" cy="60" r="3.2" fill="#111"/>
+<circle cx="195" cy="60" r="1.8" fill="rgba(0,200,120,0.6)"/>
+<!-- Microphone slits (left side) -->
+<rect x="58" y="58" width="14" height="1.5" rx="0.7" fill="rgba(0,0,0,0.45)"/>
+<rect x="58" y="64" width="14" height="1.5" rx="0.7" fill="rgba(0,0,0,0.45)"/>
+<rect x="58" y="70" width="14" height="1.5" rx="0.7" fill="rgba(0,0,0,0.45)"/>
+</svg>

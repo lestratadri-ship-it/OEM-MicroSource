@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 300">
+<defs>
+<linearGradient id="body-lap" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#fff" stop-opacity="0.18"/>
+  <stop offset="0.35" stop-color="#fff" stop-opacity="0.04"/>
+  <stop offset="0.65" stop-color="#000" stop-opacity="0"/>
+  <stop offset="1" stop-color="#000" stop-opacity="0.22"/>
+</linearGradient>
+<linearGradient id="vert-lap" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#fff" stop-opacity="0.12"/>
+  <stop offset="0.5" stop-color="#fff" stop-opacity="0"/>
+  <stop offset="1" stop-color="#000" stop-opacity="0.12"/>
+</linearGradient>
+<radialGradient id="lens-lap" cx="0.32" cy="0.30" r="0.85">
+  <stop offset="0" stop-color="#3A3A40"/>
+  <stop offset="0.25" stop-color="#141416"/>
+  <stop offset="0.7" stop-color="#050506"/>
+  <stop offset="1" stop-color="#000"/>
+</radialGradient>
+<radialGradient id="screen-lap" cx="0.5" cy="0.4" r="0.75">
+  <stop offset="0" stop-color="#1A2540" stop-opacity="0.55"/>
+  <stop offset="0.5" stop-color="#0A1020" stop-opacity="0.35"/>
+  <stop offset="1" stop-color="#000" stop-opacity="0"/>
+</radialGradient>
+<filter id="softblur-lap" x="-30%" y="-30%" width="160%" height="160%">
+  <feGaussianBlur stdDeviation="6"/>
+</filter>
+</defs>
+<!-- Soft ground shadow -->
+<ellipse cx="220" cy="285" rx="185" ry="7" fill="#000" opacity="0.24" filter="url(#softblur-lap)"/>
+<!-- Base / palm rest (slight trapezoid for perspective) -->
+<path d="M18 230 L422 230 L432 275 L8 275 Z" fill="#1A1A1D" stroke="rgba(0,0,0,0.5)"/>
+<path d="M18 230 L422 230 L432 275 L8 275 Z" fill="url(#body-lap)"/>
+<!-- Base side highlight -->
+<path d="M18 230 L422 230 L420 232 L20 232 Z" fill="rgba(255,255,255,0.16)"/>
+<!-- Keyboard area (faint key pattern hint) -->
+<rect x="40" y="236" width="360" height="2" fill="rgba(0,0,0,0.08)"/>
+<g opacity="0.10">
+<rect x="48" y="240" width="22" height="3" rx="0.8" fill="#000"/><rect x="74" y="240" width="22" height="3" rx="0.8" fill="#000"/><rect x="100" y="240" width="22" height="3" rx="0.8" fill="#000"/><rect x="126" y="240" width="22" height="3" rx="0.8" fill="#000"/><rect x="152" y="240" width="22" height="3" rx="0.8" fill="#000"/><rect x="178" y="240" width="22" height="3" rx="0.8" fill="#000"/><rect x="204" y="240" width="22" height="3" rx="0.8" fill="#000"/><rect x="230" y="240" width="22" height="3" rx="0.8" fill="#000"/><rect x="256" y="240" width="22" height="3" rx="0.8" fill="#000"/><rect x="282" y="240" width="22" height="3" rx="0.8" fill="#000"/><rect x="308" y="240" width="22" height="3" rx="0.8" fill="#000"/><rect x="334" y="240" width="22" height="3" rx="0.8" fill="#000"/><rect x="360" y="240" width="22" height="3" rx="0.8" fill="#000"/><rect x="48" y="245" width="22" height="3" rx="0.8" fill="#000"/><rect x="74" y="245" width="22" height="3" rx="0.8" fill="#000"/><rect x="100" y="245" width="22" height="3" rx="0.8" fill="#000"/><rect x="126" y="245" width="22" height="3" rx="0.8" fill="#000"/><rect x="152" y="245" width="22" height="3" rx="0.8" fill="#000"/><rect x="178" y="245" width="22" height="3" rx="0.8" fill="#000"/><rect x="204" y="245" width="22" height="3" rx="0.8" fill="#000"/><rect x="230" y="245" width="22" height="3" rx="0.8" fill="#000"/><rect x="256" y="245" width="22" height="3" rx="0.8" fill="#000"/><rect x="282" y="245" width="22" height="3" rx="0.8" fill="#000"/><rect x="308" y="245" width="22" height="3" rx="0.8" fill="#000"/><rect x="334" y="245" width="22" height="3" rx="0.8" fill="#000"/><rect x="360" y="245" width="22" height="3" rx="0.8" fill="#000"/>
+</g>
+<!-- Trackpad (recessed) -->
+<rect x="175" y="253" width="90" height="18" rx="3" fill="rgba(0,0,0,0.14)" stroke="rgba(0,0,0,0.18)" stroke-width="0.4"/>
+<!-- Hinge band -->
+<rect x="22" y="225" width="396" height="5" fill="#050507" opacity="0.7"/>
+<rect x="22" y="225" width="396" height="1" fill="#000" opacity="0.4"/>
+<!-- Lid/screen -->
+<rect x="22" y="12" width="396" height="218" rx="9" fill="#1A1A1D" stroke="rgba(0,0,0,0.5)"/>
+<rect x="22" y="12" width="396" height="218" rx="9" fill="url(#body-lap)"/>
+<!-- Lid rim light (top) -->
+<rect x="45" y="12.5" width="350" height="0.6" fill="rgba(255,255,255,0.16)"/>
+<!-- Screen (dark, inset) -->
+<rect x="32" y="22" width="376" height="200" rx="3" fill="#0A0E18" stroke="rgba(0,0,0,0.5)"/>
+<!-- Screen content glow -->
+<rect x="32" y="22" width="376" height="200" rx="3" fill="url(#screen-lap)"/>
+<!-- Screen gloss reflection -->
+<path d="M32 22 L200 22 L120 130 L32 130 Z" fill="rgba(255,255,255,0.04)"/>
+<!-- Camera pinhole -->
+<circle cx="220" cy="18" r="2.2" fill="#000"/>
+<circle cx="220" cy="18" r="1.1" fill="#222"/>
+</svg>
